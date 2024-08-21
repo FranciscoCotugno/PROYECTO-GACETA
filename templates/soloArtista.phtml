@@ -1,25 +1,24 @@
 <?php require "templates/headerSegundo.phtml" ?>
     <!-- <link rel="stylesheet" href="../css/styles.css"> REVISAR PUEDE Q ESTE BIEN, ME PARECE RARO -->
-    <div main>
-        <div contenedor fotos y bio>
-            <div>
-                contenedor fotos de la izquierda
+    <div class="mainSoloArtista">
+        <div class="imagenesYbio" >
+            <div class="divImagenes">
+                <img src="" alt="Foto 1" class="imagen">
             </div>
-            <div>
-                div medio divisor
-            </div>
-            <div>
-                div donde se encuentra la bio
+            <div class="divisor"></div>
+            <div class="bio">
+                <h4> <?= $artistaName->Artist_tittle?> </h4>
+                <div class="texto-bio">
+                    <p><?= $artistaName->Artist_bio?> </p>
+                </div>
             </div>
         </div>
-        <div>
+        <!-- <div class="linksRedes">
             div pequeno con links a spotify/youtube instagram etc
         </div>
-        <div>
+        <div class="novedades">
             div novedades
-        </div>
+        </div> -->
     </div>
-    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam doloremque quis iure. Alias maiores tempora error libero unde obcaecati nobis saepe commodi, praesentium facere voluptas dolor porro accusantium, minus sint.
-    <h4>artista: <?= $artistaName->Artist_name?> </h4>
-    <h4>artista: <?= $artistaName->Artist_bio?> </h4>
-<?php require "templates/footer.phtml"?>
+    
+<?php require "templates/footerSegundo.phtml"?>

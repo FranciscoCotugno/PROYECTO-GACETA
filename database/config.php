@@ -3,3 +3,4 @@
     const MYSQL_PASS = '';
     const MYSQL_DB = 'basegaceta';//Para rellenar una nueva base de datos, crear una base de datos en phpmyadmin e ingresar el nombre aqui
     const MYSQL_HOST = 'localhost';
+  
