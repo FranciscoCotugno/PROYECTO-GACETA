@@ -8,9 +8,7 @@ class personalView{
         require 'templates/header.phtml';
     }*/
     public function viewHome(){
-        require "templates/header.phtml";
         require 'templates/home.phtml';
-        require "templates/footer.phtml";
     }
 
     public function showAllArtistas($artists){

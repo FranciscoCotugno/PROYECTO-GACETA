@@ -327,8 +327,9 @@ footer {
     font-size: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: 250px;
-    flex-grow: 1;
+    width: auto;
+    /* Opcional para evitar que el input se ajuste al 100% del contenedor */
+    display: inline-block;
 }
 
 /* Estilo para los botones */

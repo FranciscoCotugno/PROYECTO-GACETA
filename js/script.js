@@ -13,18 +13,6 @@ document.getElementById("copyButton").addEventListener("click", function() {
     });
 });
 
-document.getElementById("copyButton").addEventListener("click", function() {
-    // Seleccionar el contenido del input
-    var emailInput = document.getElementById("email");
-    emailInput.select();
-    emailInput.setSelectionRange(0, 99999); // Para dispositivos móviles
-
-    // Copiar el contenido al portapapeles
-    document.execCommand("copy");
-
-    // Mostrar un mensaje de confirmación (opcional)
-    alert("Correo electrónico copiado: " + emailInput.value);
-});
 
 
 
