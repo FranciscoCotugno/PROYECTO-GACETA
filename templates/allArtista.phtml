@@ -1,0 +1,19 @@
+    <main class="main-content">
+        <div class="container">
+            <div class="card__container">
+                <?php foreach($artists as $artist) :?>
+                    <article class="card__article">
+                        <img src="img/Artistas/<?=$artist->Artist_id?>.jpg" alt="Card Ramma" class="card__img">
+
+                        <div class="card__data">
+                            <h3 class="card__title"> Artista <br> <?=$artist->Artist_name?></h3>
+                        </div>
+
+                        <img src="" alt="" class="card__bg">
+
+                        <a href="artista/<?=$artist->Artist_name?>" class="card__button">Conocelo más <i class="ri-arrow-right-line"></i></a>
+                    </article>
+                <?php endforeach ?>     
+            </div>
+        </div>
+    </main>   

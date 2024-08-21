@@ -25,7 +25,11 @@ class personalModel extends Model
 
     public function getArtistByName($name)
     {
-        $query = $this->db->prepare('SELECT * FROM `artist` WHERE `Artist_name` = ?');
+        $name = trim($name); // Elimina espacios al inicio y al final
+        //$name = preg_replace('/[^\p{L}\p{N}\s]/u', '', $name);
+
+        $query = $this->db->prepare('SELECT * FROM `artist` WHERE `Artist_name` =?');
+        
         $query->execute([$name]);
 
         $artist = $query->fetch(PDO::FETCH_OBJ);
@@ -33,8 +37,8 @@ class personalModel extends Model
         return $artist;
     }
 
-
-   /* public function getPersonalByCategory($id)
+    
+    public function getPersonalByCategory($id)
     {
         $query = $this->db->prepare("SELECT * FROM artist WHERE Category_id =?");
         $query->execute([$id]);
@@ -42,6 +46,6 @@ class personalModel extends Model
         $id = $query->fetchAll(PDO::FETCH_OBJ);
 
         return $id;
-    }   */
+    } 
 
 }

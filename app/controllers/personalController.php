@@ -12,22 +12,38 @@ class controllerPersonal
         $this->view = new personalView();
     }
 
-    public function homeController()
+    //$artists = $this->model->getArtist();
+    //$categorys = $this->model->getCategorys();
+    public function showHome()
     {
-        $artists = $this->model->getArtist();
-        $categorys = $this->model->getCategorys();
-        $this->view->viewHome($artists, $categorys);
+        $this->view->viewHome();
     }
-
+    public function showAllArtistas(){
+        $artists = $this->model->getPersonalByCategory(1);
+        $this->view->showAllArtistas($artists);
+    }
     public function showArtista($name){
-       // $artists = $this->model->getArtist();
-        //$categorys = $this->model->getCategorys();
-        $artistaId = $this->model->getArtistByName($name);
-        $this->view->showArtistaById($artistaId);
+        $artistaName = $this->model->getArtistByName($name);
+        if(empty($artistaName)){
+            $this->view->showError("Error 404"); //HACERLO CON TODOS
+        }else{
+            $this->view->showArtistaByName($artistaName);
+        }
     }
-
-    public function showError()
-    {
-       // $this->view->showError();
+    public function showAllProductores(){
+        $productores = $this->model->getPersonalByCategory(2);
+        $this->view->showAllProductores($productores);
+    }
+    public function showProductor($name){
+        $productorName = $this->model->getArtistByName($name);
+        $this->view->showProductorByName($productorName);
+    }
+    public function showAllAudiovisuales(){
+        $audiovisuales = $this->model->getPersonalByCategory(3);
+        $this->view->showAllAudiovisuales($audiovisuales);
+    }
+    public function showAudiovisual($name){
+        $audiovisualName = $this->model->getArtistByName($name);
+        $this->view->showAudiovisualByName($audiovisualName);
     }
 }
