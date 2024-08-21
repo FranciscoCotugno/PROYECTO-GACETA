@@ -35,6 +35,9 @@ class personalView{
     public function showAudiovisualByName($audiovisualName){
         require 'templates/soloAudiovisual.phtml';
     }
+    public function viewContacto(){
+        require 'templates/contacto.phtml';
+    }
     public function showError($error){
         require 'templates/showError.phtml';
         

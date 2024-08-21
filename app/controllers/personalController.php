@@ -46,4 +46,7 @@ class controllerPersonal
         $audiovisualName = $this->model->getArtistByName($name);
         $this->view->showAudiovisualByName($audiovisualName);
     }
+    public function showContacto(){
+        $this->view->viewContacto();
+    }
 }

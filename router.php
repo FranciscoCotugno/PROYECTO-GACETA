@@ -39,6 +39,10 @@ switch ($params[0]) {
         $controller = new controllerPersonal();
         $controller->showAudiovisual($params[1]);
         break;
+    case 'Contacto':
+        $controller = new controllerPersonal();
+        $controller->showContacto();    
+        break;
     default:
         $controller = new controllerPersonal();
         $controller->showHome();
