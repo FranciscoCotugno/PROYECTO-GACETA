@@ -24,6 +24,7 @@ class controllerPersonal
     }
     public function showArtista($name){
         $artistaName = $this->model->getArtistByName($name);
+        //$grupoImg = $this->model->getGrupoImgById($artistaName->Artist_id); MISMO CONCEPTO QUE getArtistByName($name) hay q exportar la base
         if(empty($artistaName)){
             $this->view->showError("Error 404"); //HACERLO CON TODOS
         }else{
