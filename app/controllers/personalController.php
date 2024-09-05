@@ -30,7 +30,7 @@ class controllerPersonal
         }else{
             $this->view->showArtistaByName($artistaName);
         }
-    }
+    } 
     public function showAllProductores(){
         $productores = $this->model->getPersonalByCategory(2);
         $this->view->showAllProductores($productores);

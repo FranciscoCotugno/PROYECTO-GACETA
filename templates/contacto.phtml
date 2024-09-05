@@ -1,11 +1,12 @@
 <?php require "templates/header.phtml"; ?>
-<body>
-    <section class="email-container">
-        <input type="text" id="email" value="gacetaplay@gmail.com" readonly>
-        <button id="copyButton">📋</button>
-        <button id="mailButton" ><a href="mailto:gacetaplay@gmail.com">✉️</button>
-    </section>
+    <div>
+        <section class="email-container">
+            <input type="text" id="email" value="gacetaplay@gmail.com" readonly>
+            <button id="copyButton">📋</button>
+            <button id="mailButton" ><a target="_blank" href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox?compose=GTvVlcSBpDwRQvbFCnnjcZGdwjmSrHKQRthMJnwWdvkSMttHckdtdqqPHfMkhMvbPbsQcFgCxVljv">✉️</a></button>
+            <!-- <button id="mailButton" ><a target="_blank" href="mailto:gacetaplay@gmail.com">✉️</a></button> -->
+        </section>
+    </div>
 
-    <script src="js/script.js"></script>
-</body>
 <?php require "templates/footer.phtml"; ?>
+    <script src="js/script.js"></script>

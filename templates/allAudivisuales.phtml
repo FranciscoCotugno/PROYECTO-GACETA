@@ -1,23 +1,19 @@
 <?php require "templates/header.phtml" ?>
-
-    <main class="main-content">
-        <div class="container">
-            <div class="card__container">
-                <?php foreach($audiovisuales as $audiovisual) :?>
-                    <article class="card__article">
-                        <img src="img/Audiovisuales/<?=$audiovisual->Artist_id?>.jpg" alt="Card" class="card__img">
-
-                        <div class="card__data">
-                            <h3 class="card__title"> Artista <br> <?=$audiovisual->Artist_name?></h3>
-                        </div>
-
-                        <img src="" alt="" class="card__bg">
-
-                        <a href="audiovisual/<?=$audiovisual->Artist_name?>" class="card__button">Conocelo más <i class="ri-arrow-right-line"></i></a>
-                    </article>
-                <?php endforeach ?>     
-            </div>
+<div id="card-area">
+    <div class="wrapper">
+        <div class="box-area">
+            <?php foreach($audiovisuales as $audiovisual) :?>
+                <div class="box">
+                    <img src="img/Audiovisuales/<?=$audiovisual->Artist_id?>.jpg" alt="Artista">
+                    <div class="overlay">
+                        <h3><?=$audiovisual->Artist_name?></h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem quisquam placeat
+                            illo fugiat nulla! Consectetur?</p>
+                        <a href="audiovisual/<?=$audiovisual->Artist_name?>">Conocelo más</a>
+                    </div>
+                </div>
+            <?php endforeach ?>  
         </div>
-    </main>   
-
+    </div>
+</div>
 <?php require "templates/footer.phtml"?>

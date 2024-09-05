@@ -12,9 +12,8 @@ class personalView{
     }
 
     public function showAllArtistas($artists){
-        require "templates/header.phtml";
+
         require 'templates/allArtista.phtml';
-        require "templates/footer.phtml";
     }
     public function showArtistaByName($artistaName){
         //require "templates/header.phtml";
