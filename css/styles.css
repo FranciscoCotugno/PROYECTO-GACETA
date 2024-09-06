@@ -107,6 +107,12 @@ img {
     font-weight: 200;
 }
 
+/* Menu hamburguesa */
+.abrir-menu,
+.cerrar-menu {
+    display: none;
+}
+
 
 
 
@@ -606,8 +612,49 @@ h2::before{
         --normal-font-size: 1rem;
     }
 }
-@media(max-width: 574px){
+@media screen and(max-width: 574px){
     .footer-col{
         width: 100%;
+    }
+}
+@media (max-width: 550px){
+    .abrir-menu,
+    .cerrar-menu {
+        display: block;
+        border: 0;
+        font-size: 1.25rem;
+        background-color: transparent;
+        cursor: pointer;
+    }
+    .abrir-menu{
+        color: #fff;
+    }
+    .cerrar-menu{
+        color: #fff;
+        bottom: 0;
+    }
+    .navbar{
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        padding: 2rem;
+    } 
+    .navbar.visible{
+        opacity: 1;
+        visibility: visible;
+        margin-top: 2rem;
+    }
+    .nav-list{
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        gap: 1rem;
+        padding: 1rem;
     }
 }
