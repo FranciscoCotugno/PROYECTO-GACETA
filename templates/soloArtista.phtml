@@ -1,13 +1,50 @@
 <?php require "templates/headerSegundo.phtml" ?>
 
-    <div class="headerArtistas">
-        <h1 id="nombreArtista"><?=$artistaName->Artist_name?></h1>
-        <div class="redesArtista">
-            <a href="#" id="instagram-link"><img src="../img/Logos/instagram3.png" alt="Instagram" class="redesLogo"></a>
-            <a href="#" id="youtube-link"><img src="../img/Logos/Youtube3.png" alt="YouTube" class="redesLogo"></a>
-            <a href="#" id="spotify-link"><img src="../img/Logos/spotify.png" alt="Spotify" class="redesLogo"></a>
+    <div class="header-container">
+        <div class="header-content">
+            <h1><?=$artistaName->Artist_name?></h1>
+            <div class="social-icons">
+                <a href="#"><img src="../img/Logos/ig.png" alt="Instagram"></a>
+                <a href="#"><img src="../img/Logos/spotify_icon.png" alt="Spotify"></a>
+                <a href="#"><img src="../img/Logos/Youtube_Music_icon.png" alt="Youtube"></a>
+                <a href="#"><img src="../img/Logos/tiktok.png" alt="TikTok"></a>
+            </div>
+            <div class="label-logo">
+                <img src="../img/Logos/LOGO BLANCO-03.png" alt="Gaceta Play Logo">
+            </div>
         </div>
     </div>
+
+    <div class="container-platforms">
+        <div class="album-cover">
+            <img src="../img/Logos/intrepido.jpg" alt="Album Cover">
+            <button class="play-button"><a href="https://open.spotify.com/intl-es/artist/7b0pdDyPV9f9hyDXAhk4Sg">▶</a></button>
+        </div>
+        <div class="platforms">
+            <h3>Escuchá a <?=$artistaName->Artist_name?> en todas las plataformas</h2>
+            <div class="platform-list">
+                <div class="platform-item">
+                    <img src="../img/Logos/spotify_icon.png" alt="Spotify">
+                    <span>Spotify</span>
+                </div>
+                <div class="platform-item">
+                    <img src="../img/Logos/Youtube_Music_icon.png" alt="YouTube Music">
+                    <span>YouTube Music</span>
+                </div>
+                <div class="platform-item">
+                    <img src="../img/Logos/amazon_music.png" alt="Amazon Music">
+                    <span>Amazon Music</span>
+                </div>
+                <div class="platform-item">
+                    <img src="../img/Logos/apple_music.png" alt="Apple Music">
+                    <span>Apple Music</span>
+                </div>
+            </div>
+        </div>
+    </div> 
+
+    
+
     <div class="mainSoloArtista">
         <div class="imagenesYbio">
             <div class="divImagenes">
